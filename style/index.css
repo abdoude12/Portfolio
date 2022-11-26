@@ -1,4 +1,121 @@
 /* colors declaration */
+/* font faimaly */
+/* font wieght */
 /* sizing  */
+/* setting the border boxing */
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 1rem;
+  margin: 0;
+  background-color: #F2F2F2;
+  font-family: "Montserrat", Georgia, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+/* personal info section */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+/* mian content */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skills ul li {
+  display: flex;
+  align-items: center;
+}
+.skills ul li > div {
+  flex-basis: 70%;
+  margin-left: auto;
+  background-color: #C4C4C4;
+  height: 10px;
+  border-radius: 5px;
+}
+.skills ul li > div::before {
+  content: "";
+  background-color: #2F80ED;
+  width: 50%;
+  display: block;
+  position: absolute;
+  height: 10px;
+  border-radius: inherit;
+}
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.blogs div {
+  display: flex;
+  align-items: flex-start;
+}
+.blogs div h3 {
+  margin-top: 0;
+}
+.blogs div div {
+  flex-basis: 70%;
+}
+.blogs div div img {
+  width: 100%;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.hobbies figure {
+  margin: 0;
+}
+.hobbies figure img {
+  width: 100%;
+}
 
 /*# sourceMappingURL=index.css.map */

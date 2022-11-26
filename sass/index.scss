@@ -7,8 +7,8 @@ $bgslider-color: #C4C4C4 ;
 $white:white ; 
 
 /* font faimaly */
-$f-faimaly : "Montserrat" , Georgia , serif  ;
-$Nf-fainmaly: "Roboto" , Georgia , serif ; 
+$f-faimaly : "Montserrat" , Georgia , sans-serif  ;
+$Nf-fainmaly: "Roboto" , Georgia , sans-serif ; 
 
 /* font wieght */
 $f-w600 : 600 ; 
@@ -18,4 +18,115 @@ $f-w400 : 400 ;
 
 /* sizing  */
 $max-width: 65.375em;
- 
+
+/* setting the border boxing */
+html {
+  box-sizing: border-box;
+}
+* , *::after , *::before {
+  box-sizing: inherit;
+}
+body {
+  padding: 1rem;
+  margin: 0;
+  background-color: $main-bg;
+  font-family: $f-faimaly;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+
+/* personal info section */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.avatar {
+  img {
+    width: 100%;
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* mian content */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0.5em;
+  border-radius: 5px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+    }
+    li>div {
+      flex-basis: 70%;
+      margin-left: auto;
+      background-color: $bgslider-color;
+      height: 10px;
+      border-radius: 5px;
+      &::before {
+        content: "";
+        background-color: $slider-color;
+        width: 50%;
+        display: block;
+        position: absolute;
+        height: 10px;
+        border-radius: inherit;
+      }
+    }
+  }
+}
+.blogs {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0.5em;
+  border-radius: 5px;
+  div {
+    display: flex;
+    align-items: flex-start;
+    h3 {
+        margin-top: 0;
+      }
+    div {
+      flex-basis: 70%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 0.5em ; 
+  figure {
+    margin: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
