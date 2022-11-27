@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
   <script src="/js/index.js" defer></script>
+      <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   <title>Portfolio</title>
 </head>
 <body>
@@ -124,61 +129,86 @@
     <h2>Projects (<span class="tags-numbers"></span>)</h2>
     <button>React</button>
   </section>
-  <section class="Projects">
-    <div>
-      <figure>
-        <img src="" alt="">
-        <figcaption>
-          <div class="tags"></div>
-          <h3>Recipe Blog</h3>
-          <p></p>
-        </figcaption>
-      </figure>
-      <div class="navigaiton">
-        <button>
-          Demo
-        </button>
-        <button>
-          code 
-        </button>  
+
+
+  <section class="Projects swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <figure>
+          <div >
+            <img src="/assets/dropdown.jpg" alt="">
+          </div>
+          <figcaption>
+            <div class="tags">
+              <p>#css</p>
+            </div>
+            <h3>DropDown</h3>
+            <p>In this project, I work with html and css to create a responsive page. this is similar with a page. the design is from devchallenge.io</p>
+          </figcaption>
+        </figure>
+        <div class="navigaiton">
+          <a href="">Demo</a>
+          <a href="">code</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure>
+          <div>
+          <img src="/assets/cat-wiki.png" alt="">
+          </div>
+          <figcaption>
+            <div class="tags">
+              <p>#css</p>
+            </div>
+            <h3>WikiCats</h3>
+            <p>In this project, I work with html and css to create a responsive page. this is similar with a page. the design is from devchallenge.io</p>
+          </figcaption>
+        </figure>
+        <div class="navigaiton">
+          <a href="">Demo</a>
+          <a href="">code</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure>
+          <div>
+          <img src="/assets/authontification-app.png" alt="">
+          </div>
+          <figcaption>
+            <div class="tags">
+              <p>#css</p>
+            </div>
+            <h3>Authentification App</h3>
+            <p>In this project, I work with html and css to create a responsive page. this is similar with a page. the design is from devchallenge.io</p>
+          </figcaption>
+        </figure>
+        <div class="navigaiton">
+          <a href="">Demo</a>
+          <a href="">code</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <figure>
+          <div>
+          <img src="/assets/desktop-preview.jpg" alt="">
+          </div>
+          <figcaption>
+            <div class="tags">
+              <p>#css</p>
+            </div>
+            <h3>Card info</h3>
+            <p>In this project, I work with html and css to create a responsive page. this is similar with a page. the design is from devchallenge.io</p>
+          </figcaption>
+        </figure>
+        <div class="navigaiton">
+          <a href="">Demo</a>
+          <a href="">code</a>
+        </div>
       </div>
     </div>
-    <div>
-      <figure>
-        <img src="" alt="">
-        <figcaption>
-          <div class="tags"></div>
-          <h3>My Gallery</h3>
-          <p></p>
-        </figcaption>
-      </figure>
-      <div class="navigaiton">
-        <button>
-          Demo
-        </button>
-        <button>
-          code 
-        </button>  
-      </div>
-    </div>
-    <div>
-      <figure>
-        <img src="" alt="">
-        <figcaption>
-          <div class="tags"></div>
-          <h3>WikiCats</h3>
-          <p></p>
-        </figcaption>
-      </figure>
-      <div class="navigaiton">
-        <button>
-          Demo
-        </button>
-        <button>
-          code 
-        </button>  
-      </div>
-    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </section>
   <footer>
     <h2>My Socials</h2>
@@ -188,5 +218,32 @@
       <li><a href=""><span class="sr-only">instagram</span> </a></li>
     </ul>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        breakpoints : {
+          700: {
+            slidesPerView:2 , 
+            slidesPerGroup:2 
+          }
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      }); 
+    </script>
 </body>
 </html>
